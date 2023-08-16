@@ -1,7 +1,6 @@
-const removeFromArray = function(array, argument) {
-    let index = array.indexOf(argument);
-    array.splice(index, 1);
-    return array;
+const removeFromArray = function(array, ...args) {
+    let removed = array.filter(item => !args.includes(item));
+    return removed;
 };
 
 // Do not edit below this line
